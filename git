@@ -1,0 +1,4 @@
+#!/bin/bash
+git add 0x00-hello_world
+git commit -m "update 0x00-hello_world"
+git push origin master
