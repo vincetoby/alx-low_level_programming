@@ -1,12 +1,12 @@
 /*
- * File: 2-print_alphabet.c
+ * File: 3-print_alphabet.c
  * Auth: Vincent T. Ekechukwu
  */
 
 #include <stdio.h>
 
 /**
- * main - prints the alphabet in lowercase.
+ * main - prints the alphabet in lowercase, and then in uppercase.
  *
  * Return: Always 0.
  */
@@ -25,4 +25,3 @@ int main(void)
 
         return (0);
 }
-~               i
