@@ -6,19 +6,18 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * main - prints alphabet
  *
- * return: Always 0.
+ * Return: void
  */
 
 void print_alphabet(void)
 {
-	char c = 'a';
+	char c;
 	
-	while (c <= 'z')
+	for (c = 'a'; c <= 'z'; c++)
 	{
 		_putchar(c);
-			c++;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
