@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * return: 0
+ * Return: Always 0
  */
 
 int main(void)
@@ -18,12 +18,10 @@ int main(void)
 	{
 		sum = a + b;
 		if (sum % 2 == 0)
-		{
 			even = even + sum;
-		}
 		a = b;
 		b = sum;
 	}
-	printf("%d\n", sum);
+	printf("%d\n", even);
 	return (0);
 }
