@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - entry point
@@ -14,12 +15,33 @@ int main(void)
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0)
-			printf("fizz ");
+		{
+			_putchar('F');
+			_putchar('i');
+			_putchar('z');
+			_putchar('z');
+			_putchar(' ');
+		}
 		else if (i % 5 == 0)
-			printf("buzz ");
+		{
+			_putchar('B');
+			_putchar('u');
+			_putchar('z');
+			_putchar('z');
+			_putchar(' ');
+		}
+		else if (i <= 9)
+		{
+			_putchar(i % 10 + '0');
+			_putchar(' ');
+		}
 		else
-			printf("%d ", i);
+		{
+			_putchar(i / 10 + '0');
+			_putchar(i % 10 + '0');
+			_putchar(' ');
+		}
 	}
-	printf("\n");
+	_putchar('\n');
 	return (0);
 }
