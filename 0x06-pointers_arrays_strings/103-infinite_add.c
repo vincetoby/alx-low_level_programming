@@ -1,59 +1,70 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * infinite_add - add 2 strings.
- * @n1: string1.
- * @n2: string2.
- * @r: buffer
- * @size_r: buffer size
- * Return: String with all letters in ROT13 base.
+ * _strlen - returns the length of a string
+ * @s: the string whose length to check
+ *
+ * Return: integer length of string
  */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (*s++)
+		i++;
+	return (i);
+}
+
+/**
+ * rev_string - reverses a string
+ * @s: the string to reverse
+ *
+ * Return: void
+ */
+
+char *rev_string(char *s)
+{
+	int l = _strlen(s), i = 0;
+	char t;
+
+	for (i = 0; i < l / 2; i++)
+	{
+		t = s[l - i - 1];
+		s[l - i - 1] = s[i];
+		s[i] = t;
+	}
+	return (s);
+}
+
+/**
+ * infinite_add - adds arbitrarily long string of digits
+ * @n1: the first digit string
+ * @n2: the second digit string
+ * @r: the result buffer
+ * @size_r: the size of result buffer
+ *
+ * Return: char pointer to buffer
+ */
+
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int a_len = 0, b_len = 0, carry = 0, a, b, sum, biggest;
-	
-	while (n1[a_len] != '\0')
-		a_len++;
-	while (n2[b_len] != '\0')
-		b_len++;
-	if (a_len > b_len)
-		biggest = a_len;
-	else
-		biggest = b_len;
-	if ((biggest + 1) >= size_r)
-		return (0);
-	r[biggest + 1] = '\0';
-	
-	while (biggest >= 0)
+	int l1 = _strlen(n1), l2 = _strlen(n2), i = 0, a, b, c = 0;
+
+	for (l1--, l2--, size_r--; l1 >= 0 || l2 >= 0 || c; l1--, l2--, i++)
 	{
-		a = (n1[a_len - 1] - '0');
-		b = (n1[b_len - 1] - '0');
-		if (a_len > 0 && b_len > 0)
-			sum = a + b + carry;
-		else if (a_len < 0 && b_len > 0)
-			sum = b + carry;
-		else if (a_len > 0 && b_len < 0)
-			sum = a + carry;
-		else
-			sum = carry;
-		
-		if (sum > 9)
-		{
-			carry = sum / 10;
-			sum = (sum % 10) + '0';
-		}
-		else
-		{
-			carry = 0;
-			sum = sum + '0';
-		}
-		r[biggest] = sum;
-		a_len--;
-		b_len--;
-		biggest--;
+		if (i >= size_r)
+			return (0);
+		a = 0;
+		b = 0;
+		if (l1 >= 0)
+			a = n1[l1] - '0';
+		if (l2 >= 0)
+			b = n2[l2] - '0';
+		a = a + b + c;
+		c = a / 10;
+		a %= 10;
+		r[i] = a + '0';
 	}
-	if (*(r) != 0)
-		return (r);
-	else
-		return (r + 1);
+	r[i] = '\0';
+	return (rev_string(r));
 }
