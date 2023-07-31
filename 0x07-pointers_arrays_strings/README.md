@@ -6,4 +6,7 @@ README file
 * 4-strpbrk.c: This  function locates the first occurrence in the string s of any of the bytes in the string accept
 Returns a pointer to the byte in s that matches one of the bytes in accept, or NULL if no such byte is found
 
+* 5-strstr.c: This function finds the first occurrence of the substring needle in the string haystack. The terminating null bytes (\0) are not compared
+it returns a pointer to the beginning of the located substring, or NULL if the substring is not found. 
+
 * 
