@@ -9,4 +9,4 @@ Returns a pointer to the byte in s that matches one of the bytes in accept, or N
 * 5-strstr.c: This function finds the first occurrence of the substring needle in the string haystack. The terminating null bytes (\0) are not compared
 it returns a pointer to the beginning of the located substring, or NULL if the substring is not found. 
 
-* 
+* 8-print_diagsums.c: a function that prints the sum of the two diagonals of a square matrix of integers. 
