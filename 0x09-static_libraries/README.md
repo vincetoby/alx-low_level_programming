@@ -13,3 +13,6 @@
 		**ar rcs libmy.a *.o**
 
 * i then viewed the library by doing **ar -t libmy.a**
+
+
+2. **create_static_lib.sh**: This is a script that creates a static library called liball.a from all the .c files that are in the current directory.
