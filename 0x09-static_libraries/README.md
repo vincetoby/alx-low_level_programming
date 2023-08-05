@@ -33,7 +33,7 @@ char *_strstr(char *haystack, char *needle);
 		 <pre><code>**ar rcs libmy.a**</code></pre>
 
 * i transfered a copy of each object file into my static library by using the code below:
-		<pre><code**ar rcs libmy.a \*.o**</code></pre>
+		<pre><code>**ar rcs libmy.a \*.o**</code></pre>
 
 * i then viewed the library by doing <pre><code>**ar -t libmy.a**</code></pre>
 
