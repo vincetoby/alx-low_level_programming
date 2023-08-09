@@ -16,3 +16,11 @@ This file contains explanation of all files in this directory
 	* If width or height is 0 or negative, return NULL
 
 5. **4-free_grid.c**: a function that frees a 2 dimensional grid previously created by your alloc_grid function
+6. **101-strtow.c**: a function that splits a string into words.
+    	* The function returns a pointer to an array of strings (words)
+    	* Each element of this array will contain a single word, null-terminated
+    	* The last element of the returned array should be NULL
+    	* Words are separated by spaces.
+    	* Returns NULL if str == NULL or str == ""
+    	* If your function fails, it should return NULL
+
