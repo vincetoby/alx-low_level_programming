@@ -81,7 +81,7 @@ char **strtow(char *str)
 	return (str2);
 }
 /**
- * int i, j, len, wcount
+ * i, j, len, wcount
  * @i: used for looping
  * @len: length of string(str)
  * @wcount: length of each word in string
