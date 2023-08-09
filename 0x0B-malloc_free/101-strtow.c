@@ -43,7 +43,10 @@ char **strtow(char *str)
 	int i, j = 0, len = 0, wcount = 0, words;
 	char **str2, *wrd;
 	int startwrd, endwrd;
-
+	 /* i: used for looping, len: length of string(str) */
+	 /* wcount: length of each word in string */
+	 /* str2: new space for full string, wrd: mem space for each word */
+	 /* startwrd: beginning of each word, endwrd: end of each word */
 	for (i = 0; str[i] != '\0'; i++)
 		len++;
 	words = num_words(str);
@@ -64,9 +67,7 @@ char **strtow(char *str)
 					return (NULL);
 				while (startwrd < endwrd)
 				{
-					*wrd = str[startwrd];
-					wrd++;
-					startwrd++;
+					*wrd++ = str[startwrd++];
 				}
 				*wrd = '\0';
 				str2[j] = wrd - wcount;
@@ -80,13 +81,3 @@ char **strtow(char *str)
 	str2[j] = NULL;
 	return (str2);
 }
-/**
- * @i: used for looping
- * @len: length of string(str)
- * @wcount: length of each word in string
- * *str2, wrd, startwrd, endwrd
- * @str2: new space for full string
- * @wrd: space for each word, just like a 2d array
- * @startwrd: beginning of each word
- * @endwrd: end of each word
- */
