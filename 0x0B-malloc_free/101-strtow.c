@@ -49,7 +49,7 @@ char **strtow(char *str)
 	words = num_words(str);
 	if (words == 0)
 		return (NULL);
-	str2 = malloc(sizeof(char *) * (len + 1));
+	str2 = malloc(sizeof(char *) * len);
 	if (str2 == NULL)
 		return (NULL);
 	for (i = 0; i <= len; i++)
@@ -59,7 +59,7 @@ char **strtow(char *str)
 			if (wcount != 0)
 			{
 				endwrd = i;
-				wrd = malloc(sizeof(char) * wcount + 1);
+				wrd = malloc(sizeof(char) * (wcount + 1));
 				if (wrd == NULL)
 					return (NULL);
 				while (startwrd < endwrd)
