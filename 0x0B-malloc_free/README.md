@@ -25,3 +25,6 @@ This file contains explanation of all files in this directory
     	* Returns NULL if str == NULL or str == ""
     	* If your function fails, it should return NULL.
 For explanation on how the code works, visit this [link](https://github.com/vincetoby/alx-low_level_programming/blob/master/strtow_code_explain.md)
+
+7. [**100-argstostr.c**](https://github.com/vincetoby/alx-low_level_programming/tree/master/0x0B-malloc_free): Concatenates all arguments of argv(a 2D array).
+For explanation on how the code works, click this [link](https://github.com/vincetoby/alx-low_level_programming/blob/master/0x0B-malloc_free/Explain.md)
