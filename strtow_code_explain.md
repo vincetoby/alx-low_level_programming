@@ -1,4 +1,4 @@
-# Explanation for code
+# Explanation of code
 This is C function that takes a string (str) as input and processes it to create an array of strings (str2), splitting the input string into individual words. The function's purpose is to be converting a space-separated string into an array of separate words.
 
 ## Here's a breakdown of how the code works:
