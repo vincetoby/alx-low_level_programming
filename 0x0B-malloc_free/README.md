@@ -16,7 +16,7 @@ This file contains explanation of all files in this directory
 	* The function should return NULL on failure
 	* If width or height is 0 or negative, return NULL
 
-5. [**4-free_grid.c**](https://github.com/vincetoby/alx-low_level_programming/blob/master/0x0B-malloc_free/4-free_grid.c): a function that frees a 2 dimensional grid previously created by your alloc_grid function
+5. [**4-free_grid.c**](https://github.com/vincetoby/alx-low_level_programming/blob/master/0x0B-malloc_free/4-free_grid.c): a function that frees a 2 dimensional grid previously created by your alloc_grid function. For explanation of code visit this [link](https://github.com/vincetoby/alx-low_level_programming/blob/master/0x0B-malloc_free/explain_free_grid.md).
 6. [**101-strtow.c**](https://github.com/vincetoby/alx-low_level_programming/blob/master/0x0B-malloc_free/101-strtow.c): a function that splits a string into words.
     	* The function returns a pointer to an array of strings (words)
     	* Each element of this array will contain a single word, null-terminated
