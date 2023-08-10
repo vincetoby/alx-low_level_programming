@@ -1,0 +1,26 @@
+# Explanation for code
+This is C function that takes a string (str) as input and processes it to create an array of strings (str2), splitting the input string into individual words. The function's purpose is to be converting a space-separated string into an array of separate words.
+
+## Here's a breakdown of how the code works:
+
+1. The function initializes various variables including i for looping through the input string, len to store the length of the input string, wcount to keep track of the length of each word, words to store the total number of words in the input string, and others for temporary storage.
+
+2. The code calculates the length of the input string using a loop that iterates until the null-terminator character (\0) is encountered.
+
+3. The num_words function is used to calculate the number of words in the input string.
+
+4. Memory is allocated for an array of pointers (str2) to hold the words. The size of the allocation is (words + 1) to include space for a null pointer at the end of the array.
+
+5. Another loop iterates through each character of the input string. If a space character or the null-terminator is encountered, it indicates the end of a word. If wcount is non-zero (meaning a word was being processed), memory is allocated for the word itself (wrd) and the characters of the word are copied into it.
+
+6. The str2 array is populated with the address of the wrd pointer minus the value of wcount, effectively placing the beginning of the word in the str2 array.
+
+7. The j counter is incremented to move to the next position in the str2 array, and wcount is reset to zero for the next word.
+
+8. If a non-space character is encountered, and wcount is zero, it indicates the start of a new word, and startwrd is updated accordingly.
+
+9. After processing all characters of the input string, a null pointer is placed at the end of the str2 array to mark the end of the array of words.
+
+10. The function returns the str2 array, which contains pointers to the individual words in the input string.
+
+Overall, this function takes an input string, splits it into words, allocates memory for each word, and stores the words in an array of strings.
