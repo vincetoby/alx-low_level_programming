@@ -24,4 +24,4 @@ This file contains explanation of all files in this directory
     	* Words are separated by spaces.
     	* Returns NULL if str == NULL or str == ""
     	* If your function fails, it should return NULL
-For explanation on how the code works, visit this [explanatory link](https://github.com/vincetoby/alx-low_level_programming/blob/master/strtow_code_explain.md)
+For explanation on how the code works, visit this [link](https://github.com/vincetoby/alx-low_level_programming/blob/master/strtow_code_explain.md)
