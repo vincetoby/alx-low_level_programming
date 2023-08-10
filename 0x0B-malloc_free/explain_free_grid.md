@@ -3,6 +3,15 @@
 This code defines a function named free_grid that is used to deallocate memory from a dynamically allocated 2D array.
 
 ## This the implementation of the free_grid function:
+<pre><code>void free_grid(int **grid, int height)
+{
+    int i;
+
+    for (i = 0; i < height; i++)
+        free(grid[i]);
+    free(grid);
+}
+                    </pre></code>
 
 1. The function starts by iterating through each row of the 2D array using a loop that runs from 0 to height - 1. Inside the loop:
 
