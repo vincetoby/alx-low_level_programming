@@ -5,6 +5,7 @@
  * free_dog - frees dogs
  * @d: entry structure with pointer
  */
+
 void free_dog(dog_t *d)
 {
 	if (d != NULL)
