@@ -18,7 +18,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	len1 = strlen(name);
 	len2 = strlen(owner);
-
+/* strlen gets the length of a string */
 	d = malloc(sizeof(dog_t));
 	if (d == NULL)
 	{
@@ -40,6 +40,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	strcpy(d->name, name);
 	strcpy(d->owner, owner);
+	/* strcpy copies a string */
 	d->age = age;
 	return (d);
 }
