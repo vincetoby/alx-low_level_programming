@@ -14,7 +14,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	unsigned int i;
 	char *args;
-	char *arg;
 	const char *separator2;
 	va_list var;
 	/* var holds the unknown arguments */
@@ -24,13 +23,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	else
 		separator2 = separator;
 	va_start(var, n);
-	arg = va_arg(var, char *);
-
-	if (arg == NULL)
+	if (n > 0)
 	{
-		arg = "(nil)";
+		printf("%s", va_arg(var, char *));
 	}
-	printf("%s", arg);
 	/* if n > 0 checks just the first string */
 
 	for (i = 1; i < n; i++)
