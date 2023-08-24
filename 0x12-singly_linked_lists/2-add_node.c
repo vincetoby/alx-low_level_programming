@@ -48,7 +48,7 @@ char *_strdup(const char *str)
 	if (ptr == NULL)
 		return (NULL);
 
-	for(j = 0; str[j] != '\0'; j++)
+	for (j = 0; str[j] != '\0'; j++)
 	{
 		ptr[j] = str[j]; /* copy contents of str into ptr */
 	}
