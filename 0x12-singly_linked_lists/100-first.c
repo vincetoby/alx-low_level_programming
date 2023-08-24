@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include "lists.h"
 
-void _main(void) __attribute__((constructor));
+void _main_t(void) __attribute__((constructor));
 
 /**
- * _main - function with constructor
+ * _main_t - function with constructor
  * Description: print string
  * Return: void
  */
 
-void test(void)
+void _main_t(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
