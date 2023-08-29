@@ -27,6 +27,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	}
 	while (temp->next != NULL) /*trying to get the last node which ends in NULL*/
 		temp = temp->next; /*old keeps upadting to till gets address of last node*/
-	temp->next = newnode; /*the last nodes link section then copies adress of new*/
+	temp->next = newnode; /* last node's link section then copies adress of new*/
 	return (newnode);
 }
