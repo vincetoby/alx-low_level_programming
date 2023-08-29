@@ -15,7 +15,7 @@ void free_listint2(listint_t **head)
 
 	while (*head != NULL)/* Loop while there are nodes remaining in the list*/
 	{
-		temp = *head->next; /*Store the next node in the temporary pointer*/
+		temp = (*head)->next; /*Store the next node in the temporary pointer*/
 		free(*head); /* free memory for the current node*/
 		*head = temp; /* head copies address of next node stored in temp*/
 				/* so now head points to next node on the list */
