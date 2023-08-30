@@ -27,12 +27,12 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		if (nodes == index)
 		{
-			prev->next = temp->next;
+			prev->next = temp->next; /*prev copies addr of updated temp*/
 			free(temp);
 			return (1);
 		}
-		prev = temp;
-		temp = temp->next;
+		prev = temp; /*prev copies addr of current temp*/
+		temp = temp->next; /*current temp updates to address of next node*/
 		nodes++;
 	}
 	return (-1);
