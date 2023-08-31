@@ -12,7 +12,7 @@ int get_endianness(void)
 	/*Access the first byte of num and return its value as an integer*/
 	/*typecast the address of num to a pointer to a character (char *)*/
 	/*gives access to indiv bytes of num*/
-	/*dereference the typecasted pointer  (*((char *) &n))*/ 
+	/*dereference the typecasted pointer  (*((char *) &n))*/
 	/*this gives access to first byte of num regardless of machine's endianness*/
 	return (*((char *) &num) + '0');
 }
