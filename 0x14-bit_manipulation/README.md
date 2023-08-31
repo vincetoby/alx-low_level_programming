@@ -9,5 +9,11 @@ Return: the converted number, or 0 if there is one or more chars in the string b
 * 2-get_bit.c: a function that returns the value of a bit at a given index.
 returns -1 on error.
 
-* 
+* 3-set_bit.c: a function that sets the value of a bit to 1 at a given index.
+Returns: 1 if it worked, or -1 if an error occurred
+
+* 4-clear_bit.c: a function that sets the value of a bit to 0 at a given index.
+Returns: 1 if it worked, or -1 if an error occurred 
+
+* 5-flip_bits.c: a function that returns the number of bits you would need to flip to get from one number to another.
 
