@@ -9,7 +9,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = 0, count = 0, holder = 1;
+	unsigned int i = 0, count = 0;
 	unsigned int value1, value2 = 0;
 
 	if (b == NULL)
@@ -17,7 +17,7 @@ unsigned int binary_to_uint(const char *b)
 
 	while (b[i] != '\0')
 	{
-		if (b[i] != '0' || b[i] != '1')
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
 		count++;
 		i++;
@@ -27,9 +27,9 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] == '1')
 		{
-			value1 = holder << count; /*bitwise left shift*/
-			value2 = value2 + value1;
+			value1 = 1 << count; /*bitwise left shift*/
 			count--;
+			value2 = value2 + value1;
 		}
 	}
 	return (value2);

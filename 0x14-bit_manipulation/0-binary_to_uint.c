@@ -22,6 +22,5 @@ unsigned int binary_to_uint(const char *b)
 		else if (b[i] == '0')
 			decimal = decimal << 1;
 	}
-
 	return (decimal);
 }
