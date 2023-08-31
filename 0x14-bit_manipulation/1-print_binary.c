@@ -9,7 +9,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long temp = n;
- 
+
 	/* If the temp is greater than 1, call the function recursively */
 	if (temp > 1)
 	{
