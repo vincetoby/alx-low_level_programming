@@ -27,7 +27,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	read_pro = read(opened_file, temp, letters);/*read data from opened file into temp*/
+	read_pro = read(opened_file, temp, letters);/*read data*/
+							/*from opened file into temp*/
 							/*read_pro copies data of the read process*/
 
 	writer = write(STDOUT_FILENO, temp, read_pro);/*Write the read data*/
