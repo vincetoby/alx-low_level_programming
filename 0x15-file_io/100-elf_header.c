@@ -9,7 +9,7 @@
 
 
 /**
- * check_elf - Checks if a file is an ELF file.
+ * _checkelf - Checks if a file is an ELF file.
  * @e_ident: A pointer to an array containing the ELF magic numbers.
  * Description: If the file is not an ELF file - exit code 98.
  * Return: void
@@ -104,9 +104,11 @@ void _printdata(unsigned char *e_ident)
 }
 
 /**
- * print_version - Prints the version of an ELF header.
+ * _printversion - Prints the version of an ELF header.
  * @e_ident: A pointer to an array containing the ELF version.
+ * Return: void
  */
+
 void _printversion(unsigned char *e_ident)
 {
 	printf("  Version:                           %d",
