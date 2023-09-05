@@ -20,7 +20,7 @@ This README.md file explains neccessary files in this directory
    *  if filename is NULL return -1
    *  if text_content is NULL create an empty file
 
-* **a function that appends text at the end of a file.
+* **2-append_text_to_file.c**a function that appends text at the end of a file.
 
    *  Prototype: int append_text_to_file(const char *filename, char *text_content);
    *  where filename is the name of the file and text_content is the NULL terminated string to add at the end of the file
