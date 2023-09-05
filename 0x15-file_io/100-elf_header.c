@@ -220,5 +220,6 @@ int main(int argc, char *argv[])
 	print_abi(head);
 	print_type(head);
 	print_entry(head);
+	close(opened_file);
 	return (0);
 }
