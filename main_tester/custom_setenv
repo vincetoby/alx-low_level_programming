@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int custom_setenv(const char *name, const char *value, int overwrite) {
+    // Check if name or value is NULL
+    if (name == NULL || value == NULL) {
+        errno = EINVAL; // Invalid argument
+        return -1;
+    }
+
+    // Check if the environment variable already exists
+    if (getenv(name) != NULL) {
+        if (!overwrite) {
+            return 0; // Variable exists and overwrite is not allowed
+        }
+    }
+
+    // Create or modify the environment variable
+    char *env_var = (char *)malloc(strlen(name) + strlen(value) + 2); // +2 for '=' and '\0'
+    if (env_var == NULL) {
+        errno = ENOMEM; // Insufficient memory
+        return -1;
+    }
+
+    // Construct the environment variable string in the format "name=value"
+    sprintf(env_var, "%s=%s", name, value);
+
+    // Put the environment variable into the environment
+    if (putenv(env_var) != 0) {
+        free(env_var);
+        return -1; // Error occurred while setting the variable
+    }
+
+    return 0; // Success
+}
+
+int main(void) {
+    // Example usage of custom_setenv
+    if (custom_setenv("MY_VARIABLE", "my_value", 1) == 0) {
+        printf("MY_VARIABLE set successfully.\n");
+    } else {
+        perror("custom_setenv");
+    }
+
+    return 0;
+}
+

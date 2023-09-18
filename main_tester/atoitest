@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+// Declaration of the _atoi function
+int _atoi(char *s);
+
+int main(void) {
+    char str1[] = "12345";
+    char str2[] = "-6789";
+    char str3[] = "abc";
+    char str4[] = "42 is the answer";
+    
+    // Testing with valid integer strings
+    int num1 = _atoi(str1);
+    int num2 = _atoi(str2);
+    
+    // Testing with invalid non-integer strings
+    int num3 = _atoi(str3); // Should result in 0
+    int num4 = _atoi(str4); // Should result in 42
+    
+    printf("String: %s, Integer: %d\n", str1, num1);
+    printf("String: %s, Integer: %d\n", str2, num2);
+    printf("String: %s, Integer: %d\n", str3, num3);
+    printf("String: %s, Integer: %d\n", str4, num4);
+
+    return 0;
+}
+
