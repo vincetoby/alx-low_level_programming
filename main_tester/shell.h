@@ -20,7 +20,7 @@ extern char **environ;
 /***************parser************/
 void parser(char *std_input, char **argv, int *argc);
 
-/****************PATH*************/
+/****************PATH_handler*************/
 char *path_search(const char *command);
 
 /***************function1**********/
@@ -33,21 +33,25 @@ char *_strdup(char *str);
 /****************function2***********/
 int _strcmp(char *s1, char *s2);
 char *_strcpy1(char *dest, const char *src);
-size_t _strspn(const char *str, const char *set);
-size_t _strcspn(const char *str, const char *set);
 int _strncmp(const char *str1, const char *str2, size_t num);
-size_t _token_counter(const char *str, char *delim);
 char *_strchr(const char *str, int c);
 int _strcmp1(const char *s1, char *s2);
 
 /*******************functions3*******************/
 char *_getenv(const char *var);
 int _atoi(char *str);
+size_t _strspn(const char *str, const char *set);
+size_t _strcspn(const char *str, const char *set);
 char *_strtok(char *str, const char *delim);
 char *get_cd_path();
 
+/********************function4******************/
+size_t _token_counter(const char *str, char *delim);
+
+
 /**************executor*************/
 int execute_cmd(const char *cmd, char *const argv[]);
+void execute_cmd2(char *command);
 
 /**********errors********************/
 void command_not_found(const char *command);
