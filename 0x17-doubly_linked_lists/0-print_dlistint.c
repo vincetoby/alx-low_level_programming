@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * dlistint_len - prints all elements in a linked dlistint_t list
+ * print_dlistint - prints all elements in a linked dlistint_t list
  * @h: head pointer
  * Return: length of linked list
  */
