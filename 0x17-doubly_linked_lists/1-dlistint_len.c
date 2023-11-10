@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * dlistint_len: prints length of list
+ * dlistint_len - prints length of list
  * @h: head
  * Return: length
  */
