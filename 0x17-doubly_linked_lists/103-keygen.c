@@ -13,9 +13,10 @@ int main(int argc, char *argv[])
 {
 	unsigned int i, beta;
 	size_t len, adder;
-	char *lis = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
+	char *lis;
 	char m[7] = "      ";
 
+	lis = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
 	if (argc != 2)
 	{
 		printf("Correct usage: ./keygen5 username\n");
