@@ -2,7 +2,7 @@
 
 This directory is all about creating a dynamic library.
 
-##steps
+### steps
 name of lib to create: **libdynamic.so**
 
 - wrote my c-functions and save appropriately in a directory
