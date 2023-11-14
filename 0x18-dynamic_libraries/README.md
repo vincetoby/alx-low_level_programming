@@ -2,7 +2,8 @@
 
 This directory is all about creating a dynamic library.
 
-1. **libdynamic.so**: a dynamic library libdynamic.so containing all the functions
+## 1. **libdynamic.so**:
+a dynamic library libdynamic.so containing all the functions
 
 ### steps
 name of lib to create: **libdynamic.so**
@@ -14,9 +15,11 @@ name of lib to create: **libdynamic.so**
 - Then i created a librabry file with my object codes
 <pre><code>gcc -shared -o libdynamic.so *.o</pre></code>
 
-2. **1-create_dynamic_lib.sh**: a script that creates a dynamic library called liball.so from all the .c files that are in the current directory.
+## 2. **1-create_dynamic_lib.sh**:
+a script that creates a dynamic library called liball.so from all the .c files that are in the current directory.
 
-3. **100-operations.so**: a dynamic library that contains mathematical C functions that can be called from Python
+## 3. **100-operations.so**:
+a dynamic library that contains mathematical C functions that can be called from Python
 
 ### steps
 - created a c-file called maths.c
