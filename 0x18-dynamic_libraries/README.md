@@ -9,10 +9,10 @@ name of lib to create: **libdynamic.so**
 
 - wrote my c-functions and save appropriately in a directory
 - created object files of all my fuctions by using the code below:
-<pre><code>gcc -c -fPIC \*.c</pre></code>
+<pre><code>gcc -c -fPIC *.c</pre></code>
 
 - Then i created a librabry file with my object codes
-<pre><code>gcc -shared -o libdynamic.so \*.o</pre></code>
+<pre><code>gcc -shared -o libdynamic.so *.o</pre></code>
 
 2. **1-create_dynamic_lib.sh**: a script that creates a dynamic library called liball.so from all the .c files that are in the current directory.
 
