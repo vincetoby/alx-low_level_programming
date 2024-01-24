@@ -3,10 +3,9 @@
 
 
 def island_perimeter(grid):
-    """Returns the perimeter of the island described in grid"""
-
+    """Returns the perimeter of the island described in grid
+    """
     perimeter = 0
-
     rows, cols = len(grid) - 1, len(grid[0]) - 1
 
     for i, i_content in enumerate(grid):
@@ -31,4 +30,3 @@ def island_perimeter(grid):
                     perimeter += 1
 
     return perimeter
-
